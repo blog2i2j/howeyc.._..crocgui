@@ -89,7 +89,7 @@
         {
             "id": "Show / Hide",
             "message": "Show / Hide",
-            "translation": ""
+            "translation": "表示 / 非表示"
         },
         {
             "id": "Settings",
@@ -114,12 +114,12 @@
         {
             "id": "Font",
             "message": "Font",
-            "translation": ""
+            "translation": "フォント"
         },
         {
             "id": "Logo",
             "message": "Logo",
-            "translation": ""
+            "translation": "ロゴ"
         },
         {
             "id": "Relay",
@@ -159,7 +159,7 @@
         {
             "id": "Multicast Address",
             "message": "Multicast Address",
-            "translation": ""
+            "translation": "マルチキャストアドレス"
         },
         {
             "id": "Transfer Options",
