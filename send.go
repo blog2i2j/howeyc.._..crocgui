@@ -129,6 +129,11 @@ func sendTabItem(a fyne.App, w fyne.Window) *container.TabItem {
 		// Only send if files selected
 		if len(fileentries) < 1 {
 			log.Error("no files selected")
+			dialog.ShowInformation(
+				lp("Send"),
+				lp("Pick a file to send"),
+				w,
+			)
 			return
 		}
 
@@ -183,9 +188,17 @@ func sendTabItem(a fyne.App, w fyne.Window) *container.TabItem {
 						fi := sender.FilesToTransfer[cnum]
 						filename = filepath.Base(fi.Name)
 						sendnames[filename] = cnum
+<<<<<<< HEAD
 						topline.SetText(fmt.Sprintf("%s: (%d/%d)", lp("Sending file"), filename, cnum+1, len(sender.FilesToTransfer)))
 						prog.Max = float64(fi.Size)
 						prog.SetValue(float64(sender.TotalSent))
+=======
+						fyne.Do(func() {
+							topline.SetText(fmt.Sprintf("%s: %s(%d/%d)", lp("Sending file"), filename, cnum+1, len(sender.FilesToTransfer)))
+							prog.Max = float64(fi.Size)
+							prog.SetValue(float64(sender.TotalSent))
+						})
+>>>>>>> 7a60eeb (Finally, the Receive tab doesn't freeze anymore,)
 					}
 				case <-donechan:
 					ticker.Stop()
@@ -198,7 +211,7 @@ func sendTabItem(a fyne.App, w fyne.Window) *container.TabItem {
 			for fpath := range fileentries {
 				filepaths = append(filepaths, fpath)
 			}
-			sendEntry.Disable()
+			fyne.Do(sendEntry.Disable)
 			fi, emptyfolders, numFolders, ferr := croc.GetFilesInfo(filepaths, false, false, []string{})
 			if ferr != nil {
 				log.Errorf("file info failed: %s\n", ferr)
