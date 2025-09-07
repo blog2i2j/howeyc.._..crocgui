@@ -102,7 +102,7 @@ func settingsTabItem(a fyne.App, w fyne.Window) *container.TabItem {
 	fontSelect.SetSelected(currentFont)
 
 	curveBinding := binding.BindPreferenceString("pake-curve", a.Preferences())
-	curveSelect := widget.NewSelect([]string{"siec", "p256", "p348", "p521"}, func(selection string) {
+	curveSelect := widget.NewSelect([]string{"ed25519", "siec", "p256", "p348", "p521"}, func(selection string) {
 		curveBinding.Set(selection)
 	})
 	currentCurve, _ := curveBinding.Get()
