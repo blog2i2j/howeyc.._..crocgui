@@ -29,6 +29,7 @@ func init() {
 	dict := map[string]catalog.Dictionary{
 		"en_US": &dictionary{index: en_USIndex, data: en_USData},
 		"ja_JP": &dictionary{index: ja_JPIndex, data: ja_JPData},
+		"ru_RU": &dictionary{index: ru_RUIndex, data: ru_RUData},
 		"tr_TR": &dictionary{index: tr_TRIndex, data: tr_TRData},
 		"zh_CN": &dictionary{index: zh_CNIndex, data: zh_CNData},
 		"zh_HK": &dictionary{index: zh_HKIndex, data: zh_HKData},
@@ -133,6 +134,30 @@ const ja_JPData string = "" + // Size: 803 bytes
 	"ワーク\x02ローカルネットワークを無効化\x02ローカルネットワークのみ使用する\x02マルチキャストアドレス\x02転送オプション" +
 	"\x02PAKE Curve\x02ハッシュ方式\x02多重化を無効にする\x02圧縮を無効化\x02アップロード速度の制限\x02デバッグ"
 
+var ru_RUIndex = []uint32{ // 40 elements
+	// Entry 0 - 1F
+	0x00000000, 0x0000002e, 0x00000035, 0x00000052,
+	0x00000091, 0x0000009a, 0x000000a7, 0x000000b0,
+	0x000000bf, 0x000000ce, 0x000000e4, 0x000000eb,
+	0x000000f2, 0x000000ff, 0x0000011c, 0x0000012d,
+	0x0000013a, 0x00000155, 0x00000167, 0x0000016e,
+	0x00000175, 0x0000017e, 0x00000187, 0x00000192,
+	0x000001a1, 0x000001b4, 0x000001bf, 0x000001ca,
+	0x000001d7, 0x000001e0, 0x000001f6, 0x00000207,
+	// Entry 20 - 3F
+	0x00000214, 0x0000021f, 0x0000022b, 0x0000023b,
+	0x00000269, 0x0000027d, 0x0000028c, 0x0000029b,
+} // Size: 184 bytes
+
+const ru_RUData string = "" + // Size: 667 bytes
+	"\x02Лицензионная информация\x02Это\x02Журнал отладки:\x02Секрет должен б" +
+	"ыть больше 5 знаков\x02Беру\x02Секрет\x02Беру\x02Получаю\x02Получил\x02" +
+	"Что послать\x02Шлю\x02Шлю\x02Послал\x02Отмена посылки.\x02Отменить\x02С" +
+	"екрет\x02Журналировать\x02Вкл / Выкл\x02Как\x02Вид\x02Язык\x02Тема\x02Ш" +
+	"рифт\x02Логотип\x02Посредник\x02Адрес\x02Порты\x02Пароль\x02сеть\x02Не " +
+	"локально\x02Локально\x02Группа\x02Обмен\x02Тип PAKE\x02Тип хеша\x02Без " +
+	"мультиплексирования\x02Без сжатия\x02Медлить\x02Отладка"
+
 var tr_TRIndex = []uint32{ // 40 elements
 	// Entry 0 - 1F
 	0x00000000, 0x00000007, 0x00000011, 0x0000002c,
@@ -225,4 +250,4 @@ const zh_TWData string = "" + // Size: 468 bytes
 	"\x02本地網路\x02停用本地\x02強制僅限本地\x02群播位址\x02傳輸選項\x02PAKE 曲線\x02哈希演算法\x02停用多重化" +
 	"\x02停用壓縮\x02上傳速度調節\x02除錯"
 
-	// Total table size 4337 bytes (4KiB); checksum: DE99A843
+	// Total table size 5188 bytes (5KiB); checksum: 1CB70E48
