@@ -1,0 +1,3 @@
+update to croc 10.2.4
+update to fyne 2.6.3
+add ru-RU translation
