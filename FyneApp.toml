@@ -1,0 +1,9 @@
+[Details]
+Icon = "metadata/en-US/images/icon.png"
+Name = "croc"
+ID = "com.github.howeyc.crocgui"
+Version = "1.11.7"
+Build = 42
+
+[Migrations]
+fyneDo = false
